@@ -1,0 +1,284 @@
+body {
+  background-color: #f3f3f3;
+  font-size: 1rem;
+  color: #212529;
+  font-family: 'MetropolisRegular';
+}
+.App {}
+
+.Header {
+  background-color: #d52b1e;
+  width: 100%;
+  padding: 8px 16px 8px 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Img-logo {
+  width: 100px;
+}
+
+.Search-Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+}
+
+.Searchbox {
+  padding: 6px 15px 6px 12px;
+  border: 0px;
+  font-size: 1rem;
+}
+
+.SearchIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.SearchButton {
+  text-decoration: none;
+  padding: 8px;
+}
+
+.Navigation-Links {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex: 1;
+}
+
+.NavButton {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.NavButton:hover {
+  text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+}
+
+.LanguageButton {
+  background-color: transparent;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 0;
+  cursor: pointer;
+}
+.LanguageButton:hover {
+  text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+}
+
+.Dropdown-Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.Dropdown-Icon::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.Dropdown {
+  top: 100%;
+  left: auto;
+  right: 0;
+  background-color: #fff;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 0.25rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.Dropdown-Item {
+  display: block;
+  width: 100%;
+  padding: 4px 24px 4px 24px;
+  clear: both;
+  font-weight: 400;
+  text-decoration: none;
+  color: #212529;
+}
+
+.Dropdown-Item-Active {
+  background-color: #d52b1e !important;
+  color: #fff;
+}
+
+.Dropdown-Item:hover {
+  background-color: #f0f0f0;
+}
+
+.Banner {
+  background-color: #2b4e7b;
+  width: 100%;
+  height: 24px;
+  margin-top: 4px;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Banner-CloseButton {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.Form-Wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.Form {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding: 8px;
+  background-color: #fff;
+  display: flex;
+  flex: 0.66;
+  justify-content: center;
+  flex-direction: column;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+}
+
+.Form-Info {
+  display: flex;
+  flex: 0.33;
+}
+
+.Form-Title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.Form-Title > h1 {
+  margin-bottom: 0;
+}
+
+.Form-Title > p {
+  margin: 0;
+  padding-top: 8px;
+  color: #6c757d;
+  font-size: .8rem;
+}
+
+.Form-Input-Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-self: center;
+  width: 65%;
+}
+
+.Form-Input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.Form-Input > input {
+  padding: 8px 15px 8px 12px;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+  margin-top: 4px;
+}
+
+.Form-Input-Title {
+  padding: 4px;
+  color: #212529;
+}
+
+.Form-Input-Subtitle {
+  padding: 4px;
+  color: #6c757d;
+  font-size: .8rem;
+}
+
+.Form-Footer {
+  padding-top: 8px;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+.Terms-Wrapper {
+  padding-top: 8px;
+  text-align: center;
+  font-size: .8rem;
+  text-decoration: none;
+}
+
+.Terms-Wrapper > a {
+  text-decoration: none;
+}
+
+.Form-Submit-Wrapper {
+  background-color: transparent;
+  margin-top: 16px;
+  padding-left: 16px;
+  width: 66%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.Form-Submit-Button {
+  background-color: #2b4e7b!important;
+  border-color: #26446b!important;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 16px 24px;
+  margin-right: 16px;
+  width: inherit;
+  text-decoration: none;
+  text-align: center;
+}
+.Form-Submit-Button > span {
+  font-size: large;
+}
+.Form-Submit-Button:hover {
+  background-color: #3865a0!important;
+  border-color: #3865a0!important;
+}
