@@ -17,33 +17,61 @@ function Form() {
   })
 
   function validateEmail() {
+    // Regular expression pattern for validating an email address
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (emailAddress === '' || !emailAddress.match(emailPattern)) setFormErrors({...formErrors, email: true})
-    else setFormErrors({...formErrors, email: false})
+    
+    // Check if the email address is empty or doesn't match the email pattern
+    if (emailAddress === '' || !emailAddress.match(emailPattern)) {
+        // Set the formErrors state to indicate an error in the email field
+        setFormErrors({...formErrors, email: true});
+    } else {
+        // Set the formErrors state to indicate no error in the email field
+        setFormErrors({...formErrors, email: false});
+    }
   }
 
   function validateSSN() {
-    setSecurityNumber(formatNumberWithSpaces(securityNumber))
+      // Format the security number by inserting spaces
+      setSecurityNumber(formatNumberWithSpaces(securityNumber));
 
-    function formatNumberWithSpaces(number) {
-      const regex = /(\d{3})(?=\d)/g;
-      return number.replace(regex, '$1 ');
-    }
+      function formatNumberWithSpaces(number) {
+          // Regular expression to insert spaces after every three digits
+          const regex = /(\d{3})(?=\d)/g;
+          return number.replace(regex, '$1 ');
+      }
 
-    if (securityNumber === '' || (securityNumber.length < 9 && securityNumber.length > 11)) setFormErrors({...formErrors, ssn: true})
-    else setFormErrors({...formErrors, ssn: false})
-
+      // Check if the security number is empty or has an invalid length
+      if (securityNumber === '' || (securityNumber.length < 9 && securityNumber.length > 11)) {
+          // Set the formErrors state to indicate an error in the security number field
+          setFormErrors({...formErrors, ssn: true});
+      } else {
+          // Set the formErrors state to indicate no error in the security number field
+          setFormErrors({...formErrors, ssn: false});
+      }
   }
 
   function validateTaxpayer() {
-    if (taxPayer === '' || taxPayer.length === 0) setFormErrors({...formErrors, taxpayer: true})
-    else setFormErrors({...formErrors, taxpayer: false})
+      // Check if the taxpayer field is empty or has a length of 0
+      if (taxPayer === '' || taxPayer.length === 0) {
+          // Set the formErrors state to indicate an error in the taxpayer field
+          setFormErrors({...formErrors, taxpayer: true});
+      } else {
+          // Set the formErrors state to indicate no error in the taxpayer field
+          setFormErrors({...formErrors, taxpayer: false});
+      }
   }
 
   function validatePaymentAmount() {
-    if (paymentAmount === '' || paymentAmount < 1 || paymentAmount > 50000) setFormErrors({...formErrors, amount: true})
-    else setFormErrors({...formErrors, amount: false})
+      // Check if the payment amount is empty, less than 1, or greater than 50000
+      if (paymentAmount === '' || paymentAmount < 1 || paymentAmount > 50000) {
+          // Set the formErrors state to indicate an error in the payment amount field
+          setFormErrors({...formErrors, amount: true});
+      } else {
+          // Set the formErrors state to indicate no error in the payment amount field
+          setFormErrors({...formErrors, amount: false});
+      }
   }
+
 
   return (
     <div className="Container">
