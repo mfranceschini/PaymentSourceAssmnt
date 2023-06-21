@@ -61,14 +61,6 @@
     margin-bottom: 8px;
   }
   
-  .Form-Input > input {
-    padding: 8px 15px 8px 12px;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    border: 1px solid #ced4da;
-    margin-top: 4px;
-  }
-  
   .Form-Input-Title {
     padding: 4px;
     color: #212529;
@@ -202,4 +194,60 @@
     flex-direction: row;
     justify-content: center;
     padding-bottom: 8px;
+  }
+
+  .Input-Wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-top: 4px;
+  }
+
+
+  .Input-Wrapper > input {
+    padding: 8px 15px 8px 12px;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    width: 100%;
+  }
+
+  .Input-Icon {
+    position: absolute;
+    right: 12px;
+  }
+
+  .Input-Payment {
+    padding-left: 40px !important;
+  }
+
+  .Input-Payment-Icon {
+    height: 90%;
+    position: absolute;
+    left: 2px;
+    background-color: #e9ecef;
+    color: #495057;
+    border-radius: 0.25rem;    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .Input-Payment-Icon > svg {
+    padding: 6px 12px;
+  }
+
+  .Input-Success {
+    border: 1px solid green !important;
+  }
+
+  .Input-Error {
+    border: 1px solid red !important;
+  }
+
+  .Input-Error-Message {
+    margin-top: 4px;
+    font-size: smaller;
+    color: red;
   }

@@ -57,6 +57,7 @@
   }
   
   .LanguageButton {
+    font-family: 'MetropolisRegular';
     background-color: transparent;
     text-decoration: none;
     color: #fff;

@@ -16,11 +16,19 @@ function Header() {
               <FontAwesomeIcon icon={faMagnifyingGlass} color='#2b4e7b' />
             </a>
           </div>
-          <a className='NavButton' href='https://www.paysimply.ca/PaymentStatus/Default.aspx' target='_blank' rel="noreferrer">Payment Status</a>
-          <a className='NavButton' href='https://www.paysimply.ca/About/Default.aspx' target='_blank' rel="noreferrer">About</a>
-          <a className='NavButton' href='https://help.paymentsource.net/paysimply/en/categories' target='_blank' rel="noreferrer">Help</a>
+          <a className='NavButton' href='https://www.paysimply.ca/PaymentStatus/Default.aspx' target='_blank' rel="noreferrer">
+            <span>Payment Status</span>
+          </a>
+          <a className='NavButton' href='https://www.paysimply.ca/About/Default.aspx' target='_blank' rel="noreferrer">
+            <span>About</span>
+          </a>
+          <a className='NavButton' href='https://help.paymentsource.net/paysimply/en/categories' target='_blank' rel="noreferrer">
+            <span>Help</span>
+          </a>
           <div className='Dropdown-Wrapper'>
-            <button className='LanguageButton Dropdown-Icon' onClick={() => setShowDropdown(!showDropdown)}>Language</button>
+            <button className='LanguageButton Dropdown-Icon' onClick={() => setShowDropdown(!showDropdown)}>
+              <span>Language</span>
+            </button>
             {showDropdown ? (
               <div className='Dropdown'>
                 <a className={`Dropdown-Item ${!window.location.href.includes('French') ? 'Dropdown-Item-Active' : ''}`} href='https://www.paysimply.ca/CRA/Details.aspx?t=1011'>English</a>

@@ -4,14 +4,18 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 import Header from './components/Header/Header'
 import Form from './components/Form/Form'
+import ApplicationSteps from './components/ApplicationSteps/ApplicationSteps'
 
 function App() {
+  // State variable to control the visibility of the banner
   const [showBanner, setShowBanner] = useState(true)
 
   return (
     <div className='App'>
+      {/* Render the Header component */}
       {Header()}
-
+      
+      {/* Check if showBanner is true, and if so, render the Banner component */}
       {showBanner ? (
         <div className='Banner'>
           <div className='Banner-Texts'>
@@ -24,8 +28,10 @@ function App() {
         </div>
       ) : null}
 
-      {/* Steps here!!! TODO */}
+      {/* Render the ApplicationSteps component */}
+      {ApplicationSteps()}
 
+      {/* Render the Form component */}
       {Form()}
 
     </div>
